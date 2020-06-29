@@ -1,0 +1,26 @@
+<div>
+  <label for="txtName">Nome</label>
+  <input type="text" [(ngModel)]="funcionario.name" id="txtName">
+</div>
+<br>
+<div>
+  <label for="txtEmail">Email</label>
+  <!-- Programação altera o html -->
+  <!-- <input type="text" [value]="email" id="txtEmail"> -->
+
+  <!-- Html altera a classe/component -->
+  <input type="text" [(ngModel)]="funcionario.email" id="txtEmail">
+</div>
+<!-- esconder elementos com if/else e hidden -->
+<!-- <div [hidden]="email.length >= 10">
+  <label for="txtBonus">Bonus</label>
+  <input [(ngModel)]="bonus" type="text" id="txtBonus">
+</div> -->
+<div *ngIf="funcionario.email.length >= 10">
+  <label for="txtBonus">Bonus</label>
+  <input [(ngModel)]="funcionario.bonus" type="text" id="txtBonus">
+</div>
+<div>
+  <!-- //ao utilizar () é um evento -->
+  <button (click)="AddFuncionario($event)" type="button">Adicionar</button>
+</div>

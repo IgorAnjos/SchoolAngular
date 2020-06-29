@@ -1,0 +1,30 @@
+## verificar a versão do node e npm
+node -v | npm -v
+
+## instalar o angular
+npm install -g @angular/cli
+
+## endi para verificar os comandos
+ng
+
+## Criando projeto com Angular
+ng new nomeProjeto
+
+## Rodar o angular
+ng serve
+
+## Gerar component
+ng g/generator component funcionario-list
+
+##Gerar Service
+ng g service funcionario
+
+##publicar Gerar pacote
+ng build
+
+## Gerar pasta dist com aplicação
+
+##WebPack (pesquisar)
+
+##instalar servidor (para aplicação)
+npm install -g http-server

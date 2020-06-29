@@ -1,0 +1,19 @@
+<h1>Lista</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let funcionario of employeeService.funcionarios">
+      <td>{{ funcionario.name }}</td>
+      <td [style.color]="getEmailColor(funcionario)">{{ funcionario.email}}</td>
+      <td>{{ funcionario.bonus }}</td>
+
+      <!-- <td [innerHtml]="funcionario.name"></td>
+      <td [innerHtml]="funcionario.email"></td> -->
+    </tr>
+  </tbody>
+</table>
